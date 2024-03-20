@@ -4,7 +4,7 @@
         <div class="ikun-title">守护最好的鸽鸽🥚</div>
         <!-- 内容 -->
         <div class="ikun-content">
-            <el-form ref="form" :model="form" label-width="80px">
+            <el-form ref="form" :model="form" label-width="100px">
                 <!-- 头像链接 -->
                 <el-form-item label="头像链接:">
                     <el-input v-model="form.avatar" clearable></el-input>
@@ -13,12 +13,19 @@
                 <el-form-item label="背景链接:">
                     <el-input v-model="form.bg" clearable></el-input>
                 </el-form-item>
+                <!-- 头像悬浮音频 -->
+                <el-form-item label="头像悬浮音频:">
+                    <el-input v-model="form.avatarMusic" clearable></el-input>
+                </el-form-item>
             </el-form>
         </div>
         <!-- 按钮 -->
         <div class="button-wrapper">
             <el-button class="button" type="primary" round @click="handleEnd">守护鸽鸽</el-button>
         </div>
+
+        <!-- music -->
+        <video :src="form.avatarMusic" autoplay v-show="false"></video>
     </div>
 </template>
 
@@ -37,13 +44,15 @@ export default {
             form: {
                 avatar: '',
                 bg: '',
+                radius: 0,
+                avatarMusic: '',
             },
             /**
              * 初始化次数
              *
              * @type {Number}
              */
-            initNumber: 0,
+            initNumber: 1,
         };
     },
     mounted() {

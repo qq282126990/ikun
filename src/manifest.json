@@ -24,20 +24,19 @@
   },
   "content_scripts": [{
       "matches": [
-        "*://juejin.cn/"
+        "*://juejin.cn/*"
       ],
       "js": [
-        "js/jquery.js"
       ],
       "css": ["css/index.css"],
       "run_at": "document_start"
     },
     {
       "matches": [
-        "*://juejin.cn/"
+        "*://juejin.cn/*"
       ],
       "js": [
-        "js/jquery.js",
+        "js/created-music.js",
         "js/content-script.js"
       ],
       "run_at": "document_end"

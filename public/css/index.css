@@ -1,26 +1,31 @@
-.float-page {
-  width: 400px;
-  border-radius: 8px;
-  position: fixed;
-  left: 50%;
-  top: 25%;
-  z-index: 1000001;
+.ikun-radius .signin-tip,
+.ikun-radius .entry-list-container,
+.ikun-radius .sidebar-block,
+.ikun-radius .sticky-author-block,
+.ikun-radius .tag-list .tag {
+  border-radius: 4px !important;
 }
 
-.el-card__header {
-  padding: 10px 15px !important
+.ikun-radius .index-aside-footer {
+  background-color: #fff !important;
+  border-radius: 4px;
+  padding: 10px;
 }
 
-.ul-box {
-  height: 200px;
-  overflow: hidden;
+video {
+  display: none !important;
 }
 
-.ul-enter-active,
-.ul-leave-active {
-  transition: all 0.5s;
+.ikun-rotate:hover {
+  animation: rotate 3s;
 }
-.ul-enter,
-.ul-leave-to {
-  height: 0;
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(250);
+  }
 }

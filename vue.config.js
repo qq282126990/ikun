@@ -15,7 +15,10 @@ module.exports = {
         },
         contentScripts: {
           entries: {
-            'content-script': ['src/content-scripts/content-script.js'],
+            // 主文件
+            'content-script': ['src/scripts/content-script.js'],
+            // 创建音乐
+            'created-music': ['src/scripts/created-music.js'],
           },
         },
       },
